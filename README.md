@@ -9,28 +9,25 @@ The file tree below highlignts the structure used in this template:
 /my-project
 │
 ├── /cmd                    # Main entry points (applications)
-│   └── /app                # Application entry point (e.g., main.go)
+│   └── /main                # Contains the application entry point (e.g., main.go)
 │
 ├── /internal               # Internal logic that is private to your project
 │   ├── /core               # Core domain logic and services
 │   │   └── /example        # Example domain logic (can be user, order, etc.)
 │   │
 │   ├── /ports              # Interfaces defining contracts for external components
-│   │   ├── /example_repo    # Example repository interface
-│   │   └── /example_service  # Example service interface
-│   │
+│   │   └── /example_repo    # Example repository interface (can be used to persist data)
+│   │   
 │   └── /adapters           # Implementations of ports for external systems
-│       ├── /db             # Database adapters
-│       ├── /api            # API integrations
-│       └── /example        # Example external implementations (e.g., third-party services)
+│       └── /example_repo   # Implementation of the example repository (e.g., in-memory, database, etc.)
 │
 ├── /web                    # Web application components
 │   ├── /views              # HTML templates or view files
 │   ├── /assets             # Static files (CSS, JS, images)
-│   ├── /routing            # Routing configuration
+│   ├── /router             # Routing configuration
 │   └── /handlers           # HTTP handler functions
 │
-├── /shared                 # Shared utilities or libraries
+├── /pkg                 # Shared utilities or libraries
 │   └── /example_util       # Example utility functions
 │
 ├── /config                 # Configuration files (YAML, JSON, etc.)
