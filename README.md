@@ -42,5 +42,3 @@ The file tree below highlignts the structure used in this template:
 Why do programmers prefer dark mode?
 
 Because light attracts bugs! 🐛
-
-And why do Go programmers never get lost? Because they always follow the right path! 😄
